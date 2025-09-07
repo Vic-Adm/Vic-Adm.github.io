@@ -7,14 +7,15 @@
 
 /* Variáveis CSS para cores baseadas na logo */
 :root {
-    --primary-color: #8B4513; /* Marrom escuro rústico */
-    --secondary-color: #D2691E; /* Marrom dourado */
-    --accent-color: #FFD700; /* Dourado */
-    --text-color: #2C1810; /* Marrom muito escuro para texto */
-    --light-color: #F5F5DC; /* Bege claro */
+    --primary-color: #3E180F; /* Marrom escuro profundo (base inferior) */
+    --secondary-color: #4B2617; /* Marrom médio (detalhes de contraste) */
+    --accent-color: #D5B96B; /* Dourado terroso (tom intermediário) */
+    --text-color: #3E180F; /* Marrom escuro profundo para texto */
+    --light-color: #E3C773; /* Amarelo claro (fundo principal) */
+    --light-variant: #E5C974; /* Amarelo dourado (variação do fundo) */
     --white: #FFFFFF;
-    --shadow: rgba(139, 69, 19, 0.1);
-    --shadow-hover: rgba(139, 69, 19, 0.2);
+    --shadow: rgba(62, 24, 15, 0.1);
+    --shadow-hover: rgba(62, 24, 15, 0.2);
 }
 
 /* Estilos base */
@@ -23,10 +24,10 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background: 
-        linear-gradient(135deg, rgba(139, 69, 19, 0.03) 25%, transparent 25%),
-        linear-gradient(225deg, rgba(139, 69, 19, 0.03) 25%, transparent 25%),
-        linear-gradient(45deg, rgba(139, 69, 19, 0.03) 25%, transparent 25%),
-        linear-gradient(315deg, rgba(139, 69, 19, 0.03) 25%, transparent 25%);
+        linear-gradient(135deg, rgba(62, 24, 15, 0.03) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(62, 24, 15, 0.03) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(62, 24, 15, 0.03) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(62, 24, 15, 0.03) 25%, transparent 25%);
     background-size: 60px 60px;
     background-position: 0 0, 30px 0, 30px -30px, 0px 30px;
     background-color: var(--light-color);
@@ -40,13 +41,13 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--light-color), var(--light-variant));
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 2px 20px rgba(62, 24, 15, 0.3);
 }
 
 .header .container {
@@ -55,23 +56,23 @@ body {
     align-items: center;
 }
 
-.logo-container {
+.logo-container {   
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
 .logo {
-    height: 50px;
+    height: 30px;
     width: auto;
-    filter: brightness(0) invert(1);
 }
 
+
 .brand-name {
-    color: var(--white);
+    color: #da1215;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav ul {
@@ -81,7 +82,7 @@ body {
 }
 
 .nav a {
-    color: var(--white);
+    color: #da1215;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -90,7 +91,7 @@ body {
 }
 
 .nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(62, 24, 15, 0.15);
     transform: translateY(-2px);
 }
 
@@ -101,9 +102,9 @@ body {
     align-items: center;
     padding-top: 100px;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(210, 105, 30, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(62, 24, 15, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(213, 185, 107, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(75, 38, 23, 0.05) 0%, transparent 50%);
     position: relative;
     overflow: hidden;
 }
@@ -120,8 +121,8 @@ body {
             45deg,
             transparent,
             transparent 10px,
-            rgba(139, 69, 19, 0.02) 10px,
-            rgba(139, 69, 19, 0.02) 20px
+            rgba(62, 24, 15, 0.02) 10px,
+            rgba(62, 24, 15, 0.02) 20px
         );
     pointer-events: none;
 }
@@ -161,7 +162,7 @@ body {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    background: linear-gradient(135deg, #c16732, #a8552a);
     color: var(--white);
     padding: 1rem 2rem;
     text-decoration: none;
@@ -169,12 +170,13 @@ body {
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 4px 15px rgba(193, 103, 50, 0.3);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+    box-shadow: 0 8px 25px rgba(193, 103, 50, 0.4);
+    background: linear-gradient(135deg, #a8552a, #8f4a24);
 }
 
 .hero-image {
@@ -194,7 +196,7 @@ body {
     transform: translate(-50%, -50%);
     width: 120%;
     height: 120%;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(213, 185, 107, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     z-index: -1;
     animation: pulse-glow 3s ease-in-out infinite alternate;
@@ -207,15 +209,15 @@ body {
     height: auto;
     object-fit: contain;
     border-radius: 25px;
-    box-shadow: 0 25px 50px rgba(139, 69, 19, 0.4);
+    box-shadow: 0 25px 50px rgba(62, 24, 15, 0.4);
     transition: all 0.3s ease;
-    filter: drop-shadow(0 10px 20px rgba(139, 69, 19, 0.2));
+    filter: drop-shadow(0 10px 20px rgba(62, 24, 15, 0.2));
 }
 
 .main-product:hover {
     transform: scale(1.08);
-    box-shadow: 0 35px 70px rgba(139, 69, 19, 0.5);
-    filter: drop-shadow(0 15px 30px rgba(139, 69, 19, 0.3));
+    box-shadow: 0 35px 70px rgba(62, 24, 15, 0.5);
+    filter: drop-shadow(0 15px 30px rgba(62, 24, 15, 0.3));
 }
 
 /* Section Headers */
@@ -241,8 +243,8 @@ body {
 .about {
     padding: 100px 0;
     background: 
-        linear-gradient(45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(210, 105, 30, 0.02) 25%, transparent 25%);
+        linear-gradient(45deg, rgba(62, 24, 15, 0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(75, 38, 23, 0.02) 25%, transparent 25%);
     background-size: 40px 40px;
 }
 
@@ -276,13 +278,13 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 15px 30px rgba(62, 24, 15, 0.2);
     transition: all 0.3s ease;
 }
 
 .about-img:hover {
     transform: scale(1.03);
-    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 20px 40px rgba(62, 24, 15, 0.3);
 }
 
 /* Products Section */
@@ -301,14 +303,14 @@ body {
     background: var(--white);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
+    box-shadow: 0 10px 30px rgba(62, 24, 15, 0.1);
     transition: all 0.3s ease;
-    border: 1px solid rgba(139, 69, 19, 0.1);
+    border: 1px solid rgba(62, 24, 15, 0.1);
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 20px 40px rgba(62, 24, 15, 0.2);
 }
 
 .product-image {
@@ -318,7 +320,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(139, 69, 19, 0.05);
+    background: rgba(62, 24, 15, 0.05);
     border-radius: 15px 15px 0 0;
 }
 
@@ -360,7 +362,7 @@ body {
 }
 
 .feature {
-    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    background: linear-gradient(135deg, #c16732, var(--secondary-color));
     color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -372,8 +374,8 @@ body {
 .gallery {
     padding: 100px 0;
     background: 
-        linear-gradient(45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(210, 105, 30, 0.02) 25%, transparent 25%);
+        linear-gradient(45deg, rgba(62, 24, 15, 0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(75, 38, 23, 0.02) 25%, transparent 25%);
     background-size: 40px 40px;
 }
 
@@ -387,13 +389,13 @@ body {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 15px 30px rgba(62, 24, 15, 0.2);
     transition: all 0.3s ease;
 }
 
 .gallery-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 25px 50px rgba(62, 24, 15, 0.3);
 }
 
 .gallery-image {
@@ -401,7 +403,7 @@ body {
     height: 300px;
     object-fit: contain;
     transition: all 0.3s ease;
-    background: rgba(139, 69, 19, 0.05);
+    background: rgba(62, 24, 15, 0.05);
     padding: 15px;
 }
 
@@ -414,7 +416,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(139, 69, 19, 0.9));
+    background: linear-gradient(transparent, rgba(62, 24, 15, 0.9));
     color: var(--white);
     padding: 2rem;
     transform: translateY(100%);
@@ -440,23 +442,26 @@ body {
 .pricing {
     padding: 100px 0;
     background: 
-        linear-gradient(45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(210, 105, 30, 0.02) 25%, transparent 25%);
+        linear-gradient(45deg, rgba(62, 24, 15, 0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(75, 38, 23, 0.02) 25%, transparent 25%);
     background-size: 40px 40px;
 }
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pricing-card {
     background: var(--white);
     border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 15px 30px rgba(139, 69, 19, 0.1);
+    padding: 0;
+    box-shadow: 0 15px 30px rgba(62, 24, 15, 0.1);
     transition: all 0.3s ease;
     border: 2px solid transparent;
     position: relative;
@@ -465,14 +470,14 @@ body {
 
 .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(139, 69, 19, 0.2);
-    border-color: var(--accent-color);
+    box-shadow: 0 25px 50px rgba(62, 24, 15, 0.2);
+    border-color: #c16732;
 }
 
 .pricing-card.popular {
-    border-color: var(--accent-color);
+    border-color: #c16732;
     transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+    box-shadow: 0 20px 40px rgba(62, 24, 15, 0.15);
 }
 
 .pricing-card.popular:hover {
@@ -483,20 +488,66 @@ body {
     position: absolute;
     top: -10px;
     right: 20px;
-    background: var(--accent-color);
+    background: #c16732;
     color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 4px 15px rgba(193, 103, 50, 0.3);
+}
+
+.pricing-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(62, 24, 15, 0.03), rgba(75, 38, 23, 0.05));
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.pricing-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(213, 185, 107, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pricing-card:hover .pricing-image::before {
+    opacity: 1;
+}
+
+.pricing-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.4s ease;
+    padding: 20px;
+    filter: drop-shadow(0 8px 16px rgba(62, 24, 15, 0.15));
+    z-index: 2;
+    position: relative;
+}
+
+.pricing-card:hover .pricing-image img {
+    transform: scale(1.08) translateY(-5px);
+    filter: drop-shadow(0 12px 24px rgba(62, 24, 15, 0.25));
 }
 
 .pricing-header {
     text-align: center;
     margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+    padding: 2rem 2rem 2rem 2rem;
+    border-bottom: 1px solid rgba(62, 24, 15, 0.1);
 }
 
 .pricing-header h3 {
@@ -542,7 +593,7 @@ body {
 }
 
 .discount {
-    background: var(--accent-color);
+    background: #c16732;
     color: var(--white);
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
@@ -560,6 +611,7 @@ body {
 
 .pricing-features {
     margin-bottom: 2rem;
+    padding: 0 2rem;
 }
 
 .feature-item {
@@ -571,7 +623,7 @@ body {
 }
 
 .feature-item i {
-    color: var(--accent-color);
+    color: #c16732;
     font-size: 1.1rem;
     width: 20px;
 }
@@ -583,10 +635,11 @@ body {
 
 .pricing-cta {
     text-align: center;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .pricing-btn {
-    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    background: linear-gradient(135deg, #c16732, #a8552a);
     color: var(--white);
     border: none;
     padding: 1rem 2rem;
@@ -595,17 +648,18 @@ body {
     font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 4px 15px rgba(193, 103, 50, 0.3);
     width: 100%;
 }
 
 .pricing-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+    box-shadow: 0 8px 25px rgba(193, 103, 50, 0.4);
+    background: linear-gradient(135deg, #a8552a, #8f4a24);
 }
 
 .pricing-btn.popular {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #c16732, #8f4a24);
     font-size: 1.2rem;
     padding: 1.2rem 2rem;
 }
@@ -631,13 +685,13 @@ body {
     background: var(--white);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(139, 69, 19, 0.1);
+    box-shadow: 0 15px 30px rgba(62, 24, 15, 0.1);
     transition: all 0.3s ease;
 }
 
 .offer-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 25px 50px rgba(62, 24, 15, 0.2);
 }
 
 .offer-image {
@@ -661,13 +715,13 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: var(--accent-color);
+    background: #c16732;
     color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 1rem;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 4px 15px rgba(62, 24, 15, 0.3);
 }
 
 .offer-content {
@@ -708,7 +762,7 @@ body {
 }
 
 .offer-btn {
-    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    background: linear-gradient(135deg, #c16732, var(--secondary-color));
     color: var(--white);
     border: none;
     padding: 0.8rem 1.5rem;
@@ -722,7 +776,7 @@ body {
 
 .offer-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 6px 20px rgba(62, 24, 15, 0.3);
 }
 
 /* Footer */
@@ -743,7 +797,7 @@ body {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
-    color: var(--accent-color);
+    color: #c16732;
 }
 
 .footer-logo {
@@ -835,7 +889,7 @@ body {
     }
     
     .logo {
-        height: 40px;
+        height: 50px;
     }
     
     .brand-name {
@@ -849,7 +903,7 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(139, 69, 19, 0.98);
+        background: rgba(62, 24, 15, 0.98);
         flex-direction: column;
         text-align: center;
         gap: 0;
@@ -1013,6 +1067,7 @@ body {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 0 1rem;
+        max-width: none;
     }
     
     .pricing-card {
@@ -1288,6 +1343,19 @@ body {
     
     .about-img {
         max-height: 300px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+}
+
+/* Breakpoint para telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
     }
 }
 

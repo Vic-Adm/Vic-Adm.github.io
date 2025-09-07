@@ -9,13 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > 100) {
-            header.style.background = 'rgba(139, 69, 19, 0.98)';
-            header.style.backdropFilter = 'blur(10px)';
-        } else {
-            header.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
-            header.style.backdropFilter = 'none';
-        }
+        // Mantém sempre a cor amarela clara, independente do scroll
+        header.style.background = 'linear-gradient(135deg, var(--light-color), var(--light-variant))';
+        header.style.backdropFilter = 'none';
         
         lastScrollTop = scrollTop;
     });
@@ -342,7 +338,7 @@ const additionalStyles = `
             top: 100%;
             left: 0;
             right: 0;
-            background: rgba(139, 69, 19, 0.95);
+            background: rgba(62, 24, 15, 0.98);
             flex-direction: column;
             padding: 1rem;
             backdrop-filter: blur(10px);
@@ -358,3 +354,4 @@ const additionalStyles = `
 const styleSheet = document.createElement('style');
 styleSheet.textContent = additionalStyles;
 document.head.appendChild(styleSheet);
+
